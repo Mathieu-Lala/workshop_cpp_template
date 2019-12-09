@@ -16,7 +16,7 @@
 template<std::size_t N>
 struct my_fact {
 
-    static constexpr std::size_t value = N * my_fact<N - 1ul>::value;
+    enum { value = N * my_fact<N - 1ul>::value };
     // this will generate code like: value = N * (N - 1) * (N - 2) ... * 2 * 1;
 
 };
@@ -26,7 +26,7 @@ struct my_fact {
 template<>
 struct my_fact<0ul> {
 
-    static constexpr std::size_t value = 1ul;
+    enum { value = 1 };
 
 };
 

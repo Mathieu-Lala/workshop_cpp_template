@@ -21,7 +21,7 @@ struct my_abs {
     static constexpr T value = X < T(0) ? -X : X;
     // this value will be know before run-time
 
-#else // older style
+#else // older style but the one we will use because the point is not to do modern C++
     enum { value = X < T(0) ? -X : X };
 
 #endif
@@ -31,13 +31,7 @@ struct my_abs {
 template<typename T, T A, T B>
 struct my_max {
 
-#if __cplusplus >= 201103L
-    static constexpr T value = A > B;
-
-#else
     enum { value = A > B };
-
-#endif
 
 };
 

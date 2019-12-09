@@ -16,14 +16,14 @@
 template<typename T>
 struct my_is_const {
 
-    static constexpr bool value = false;
+    enum { value = false };
 
 };
 
 template<typename T>
 struct my_is_const<const T> {
 
-    static constexpr bool value = true;
+    enum { value = true };
 
 };
 

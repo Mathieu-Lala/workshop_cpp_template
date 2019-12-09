@@ -38,19 +38,7 @@ void my_printf(const char *format, T arg, Args &&...args)
 
 void my_printf(const char *format)
 {
-    while (*format) {
-
-        if (*format == '%') {
-            if (*(format + 1) == '%')
-                format++;
-            else {
-                // error, flag read but no argument
-                return;
-            }
-        }
-
-        std::cout << *format++;
-    }
+    std::cout << format;
 }
 
 int main()

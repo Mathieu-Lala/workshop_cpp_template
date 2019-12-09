@@ -16,14 +16,14 @@
 template<typename T, typename U>
 struct my_is_same {
 
-    static constexpr bool value = false;
+    enum { value = false };
 
 };
 
 template<typename T>
 struct my_is_same<T, T> { // <T, T> to specify that we want two input
 
-    static constexpr bool value = true;
+    enum { value = true };
 
 };
 
