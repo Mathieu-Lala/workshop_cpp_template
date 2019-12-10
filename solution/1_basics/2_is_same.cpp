@@ -30,7 +30,7 @@ struct my_is_same<T, T> { // <T, T> to specify that we want two input
 int main()
 {
     std::cout << std::boolalpha;
-    std::cout << my_is_same<char, signed char>::value << " expect: true" << std::endl;
+    std::cout << my_is_same<char, char>::value << " expect: true" << std::endl;
     std::cout << my_is_same<int, double>::value << " expect: false" << std::endl;
     std::cout << my_is_same<float, long>::value << " expect: false" << std::endl;
 
