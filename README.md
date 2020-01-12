@@ -1,22 +1,31 @@
 # :bulb: Workshop CPP meta-programming
 
-Everything you need to learn template and meta programming in C++
+Everything you need to learn template and metaprogramming in C++
 
 [![License](https://img.shields.io/github/license/IamBlueSlime/TalkOpenSource.svg?style=flat-square)](LICENSE.txt)
 [![CPP version](https://img.shields.io/badge/CPP%20standard-98-1abc9c.svg)](http://www.cplusplus.com/doc/oldtutorial/)
 
 ## Introduction
 
-This workshop will help you to start from scratch to advanced meta-programming with templates.
-Take a look on the definition of ['meta-programming '](https://en.wikipedia.org/wiki/Template_metaprogramming).
-**Warning : C++ meta programming is not modern C++ (and it trend to be deprecated)**
+This workshop will help you to learn templates and metaprogramming from scratch : don't panic if you never used them before.
+Take a look on the definition of ['template metaprogramming'](https://en.wikipedia.org/wiki/Template_metaprogramming)
 
-Make sure that you have the expected output of the main test
-**The main test is not the only way to implement, feel free to change it if you needed**
+**Warning : C++ meta-programming is not modern C++**  (and it trend to be deprecated), but it is a very interesting topic !
+
+## What you will do
+
+In the exercise folder, you will find subfolders corresponding to the level of difficulty.
+Each one contain exercises, meant to work around all the knownledge of the template in C++.
+
+Resolve all the exercice one by one !
+
+To check if you have succeded, make sure that you have the expected output of our main.
+
+**Our main is not the only way to solve the exercise, feel free to change it if needed**
 
 ### Having troubles ?
 
-Here is some documentation if needed
+Here is some documentation :
 
 * [Introduction](https://blog.feabhas.com/2014/05/an-introduction-to-c-templates/)
 * [Basics](https://www.codeproject.com/Articles/3743/A-gentle-introduction-to-Template-Metaprogramming)
