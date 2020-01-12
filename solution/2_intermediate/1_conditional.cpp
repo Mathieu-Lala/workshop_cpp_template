@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2019
 ** workshop_cpp_template
 ** File description:
-** 15_conditional - solution
+** 21_conditional - solution
 */
 
 #include <iostream>

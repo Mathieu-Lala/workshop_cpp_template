@@ -7,9 +7,11 @@
 
 #include <iostream>
 
-// EXERCISE : implement a tool able to compute the factorial of the input, at compile-time
+// EXERCISE : implement a template computing the factorial of the input, at compile-time
 
 // GOAL : Understand how to implement mathematical function thanks to template-programming
+
+// TIPS : Recursion and Specialization ?
 
 int main()
 {

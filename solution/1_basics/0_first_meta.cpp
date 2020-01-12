@@ -21,7 +21,7 @@ struct my_abs {
     static constexpr T value = X < T(0) ? -X : X;
     // this value will be know before run-time
 
-#else // older style but the one we will use because the point is not to do modern C++
+#else // older style but the one we will use because the point is not to do modern things
     enum { value = X < T(0) ? -X : X };
 
 #endif
@@ -44,22 +44,11 @@ int main()
         my_max<int, 6, 5>::value << " expect: true" << std::endl <<
         my_max<std::size_t, 2ul, 7000000000ul>::value << " expect: false" << std::endl;
 
+    std::cout << my_max<int, 3ul, -1>::value << std::endl;
+    std::cout << my_max<std::size_t, 3ul, static_cast<std::size_t>(-1)>::value << std::endl;
 }
 
-// this does not compile because standard don't support floating point template parameter
+// NOTE : this does not compile because standard don't support floating point template parameter
 //    std::cout << my_abs<float, 0.666f>::value << " expect: 0.666" << std::endl;
-
-//#define DONT_COMPILE // NOTE : comment me to compile
-#ifdef DONT_COMPILE
-
-void this_wont_compile()
-{
-    std::size_t first = 3;
-    int second = -1;
-
-    std::cout << my_max(first, second) << std::endl;
-}
-
-#endif
 
 // SOLUTION : You can split floating point into 2 integral type (ex: 10,01 => (10, 01))

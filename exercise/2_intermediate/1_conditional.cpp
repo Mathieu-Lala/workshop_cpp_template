@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2019
 ** workshop_cpp_template
 ** File description:
-** 15_conditional - exercise
+** 21_conditional - exercise
 */
 
 #include <iostream>
@@ -12,7 +12,7 @@
 
 // GOAL : Meta programming : Let's work around condition
 
-// copy your my_is_same in this file
+// copy your my_is_same in this file (1_basics/2_is_same.cpp)
 
 int main()
 {

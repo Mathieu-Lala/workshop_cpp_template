@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2019
 ** workshop_cpp_template
 ** File description:
-** 14_remove_const - exercise
+** 20_remove_const - exercise
 */
 
 #include <iostream>

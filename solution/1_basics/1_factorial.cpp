@@ -7,9 +7,11 @@
 
 #include <iostream>
 
-// EXERCISE : implement a tool able to compute the factorial of the input, at compile-time
+// EXERCISE : implement a template computing the factorial of the input, at compile-time
 
 // GOAL : Understand how to implement mathematical function thanks to template-programming
+
+// TIPS : Recursion and Specialization ?
 
 // SOLUTION :
 
@@ -17,7 +19,6 @@ template<std::size_t N>
 struct my_fact {
 
     enum { value = N * my_fact<N - 1ul>::value };
-    // this will generate code like: value = N * (N - 1) * (N - 2) ... * 2 * 1;
 
 };
 

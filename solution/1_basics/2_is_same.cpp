@@ -30,12 +30,12 @@ struct my_is_same<T, T> { // <T, T> to specify that we want two input
 int main()
 {
     std::cout << std::boolalpha;
-    std::cout << my_is_same<char, signed char>::value << " expect: true" << std::endl;
-    std::cout << my_is_same<int, double>::value << " expect: false" << std::endl;
-    std::cout << my_is_same<float, long>::value << " expect: false" << std::endl;
+    std::cout << (bool) my_is_same<char, char>::value << " expect: true" << std::endl;
+    std::cout << (bool) my_is_same<int, double>::value << " expect: false" << std::endl;
+    std::cout << (bool) my_is_same<float, long>::value << " expect: false" << std::endl;
 
     // value will be true only if the two types are exaclty the same,
-    // in some case we don't want that presicion :
+    // in some case, we don't want that presicion :
 
     std::cout << (
         my_is_same<char, const char>::value ||
@@ -43,17 +43,18 @@ int main()
         my_is_same<char, volatile char>::value ||
         my_is_same<char, char &>::value ||
         my_is_same<char, const char &>::value ||
-        my_is_same<char, char &&>::value)
+        my_is_same<char, char &&>::value ||
+        my_is_same<char, signed char>::value)
      << " expect: false" << std::endl;
 
-    // This can also be used at run-time, ever heard of decltype ?
+    // This can also be used at run-time :
 
     int a = 0;
-    int b = 0;
-    const int c = 0;
+    int b = 1;
+    int &c = b;
 
-    std::cout << my_is_same<decltype(a), decltype(b)>::value << " expect: true" << std::endl;
-    std::cout << my_is_same<decltype(a), decltype(c)>::value << " expect: false" << std::endl;
+    std::cout << (bool) my_is_same<decltype(a), decltype(b)>::value << " expect: true" << std::endl;
+    std::cout << (bool) my_is_same<decltype(a), decltype(c)>::value << " expect: false" << std::endl;
 
     return 0;
 }

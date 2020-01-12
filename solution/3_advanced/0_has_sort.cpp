@@ -2,20 +2,20 @@
 ** EPITECH PROJECT, 2019
 ** workshop_cpp_template
 ** File description:
-** 2_custom_sort
+** 30_has_sort - solution
 */
 
 #include <iostream>
 
-// EXERCISE : std::sort is the simpliest way to sort data in C++
-// but sometimes we want to use custom sorter. Implement that tell
+// EXERCISE : std::sort is the way to sort data in C++
+// but sometimes we want to use custom sorter. Implement a tool that tell
 // you if an input type contain a method sort
 
 // GOAL : Let's go insanity
 
 // SOLUTION :
 
-struct my_container {
+struct my_data {
 
     void sort() {}
 
@@ -38,8 +38,8 @@ HAS_MEMBER(has_sort, sort);
 
 int main()
 {
-    std::cout << has_sort<my_container>::value << " expect: true" << std::endl;
-    std::cout << has_sort<int>::value << " expect: false" << std::endl;
+    std::cout << (bool) has_sort<my_data>::value << " expect: true" << std::endl;
+    std::cout << (bool) has_sort<int>::value << " expect: false" << std::endl;
 
     return 0;
 }
