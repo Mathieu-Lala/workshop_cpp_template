@@ -1,4 +1,4 @@
-# :bulb: Workshop CPP meta-programming
+# :bulb: Workshop C++ meta-programming
 
 Everything you need to learn template and metaprogramming in C++
 
