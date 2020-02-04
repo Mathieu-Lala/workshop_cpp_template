@@ -14,9 +14,9 @@ Take a look on the definition of ['template metaprogramming'](https://en.wikiped
 
 ## What you will do
 
-In the exercise folder, you will find subfolders corresponding to the level of difficulty.
-Each one contain exercises, meant to work around all the knownledge of the template in C++.
+**Click to that [link](https://mybinder.org/v2/gh/QuantStack/xeus-cling/stable?filepath=notebooks/xcpp.ipynb) and upload the `Workshop.ipynb`**
 
+Each one contain exercises, meant to work around all the knownledge of the template in C++.
 Resolve all the exercice one by one !
 
 To check if you have succeded, make sure that you have the expected output of our main.
